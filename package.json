@@ -1,0 +1,13 @@
+{
+  "name": "floating-horizontal-scrollbar",
+  "version": "1.0.0",
+  "description": "Floating Horizontal Scrollbar.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cvermeul/floating-horizontal-scrollbar.git"
+  },
+  "dependencies": {
+    "global-offset": "*"
+  }
+}
