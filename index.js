@@ -31,7 +31,7 @@ module.exports = function(element) {
   };
 
   window.onscroll = function() {
-    scrollbar.style.display = element.getBoundingClientRect().height + offset.top < window.scrollY + window.innerHeight ? "none" : "block";
+    scrollbar.style.display = element.getBoundingClientRect().height + offset.top <= window.scrollY + window.innerHeight ? "none" : "block";
     scrollbar.scrollLeft = element.scrollLeft;
   };
 };
