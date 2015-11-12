@@ -1,4 +1,5 @@
-var globalOffset = require("global-offset");
+var globalOffset = require("global-offset"),
+  resize = require("resize-event");
 
 module.exports = function(element) {
   var offset = globalOffset(element),
@@ -20,8 +21,11 @@ module.exports = function(element) {
 
   scrollbar.appendChild(inner);
 
-  inner.style.width = element.children[0].getBoundingClientRect().width + "px";
   inner.style.height = "1px";
+  inner.style.width = element.children[0].getBoundingClientRect().width + "px";
+  resize(element.children[0], function() {
+    inner.style.width = element.children[0].getBoundingClientRect().width + "px";
+  });
 
   scrollbar.onscroll = function() {
     element.scrollLeft = scrollbar.scrollLeft;

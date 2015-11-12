@@ -8,6 +8,7 @@
     "url": "http://github.com/cvermeul/floating-horizontal-scrollbar.git"
   },
   "dependencies": {
-    "global-offset": "*"
+    "global-offset": "*",
+    "resize-event": "*"
   }
 }
